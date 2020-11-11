@@ -40,7 +40,6 @@ $(document).ready(function() {
         //$(".sorting_desc").click();
         $(".input-sm", "#transaction-history_filter").val("ETNXP")
         console.log($(".input-sm", "#transaction-history_filter").val("ETNXP"))
-        document.getElementsByClassName('input-sm').item(2).innerhtml = 'ETNXP'; 
         console.log(document.getElementById('sorting_coins').value)
 }
 //     function etnxcSort() {
@@ -48,16 +47,14 @@ $(document).ready(function() {
 // }
     function ltnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'LTNX';
-        $(".input-sm", "#transaction-history_filter").val("LTNX")
-        console.log($(".input-sm", "#transaction-history_filter").val("LTNX"))
-        document.getElementsByClassName('input-sm').item(2).innerhtml = 'LTNX'; 
+        $(".input-sm").val("LTNX")
+        console.log($(".input-sm", "#transaction-history_filter").val("LTNX")) 
         console.log(document.getElementById('sorting_coins').value)
 }
     function gldxSort() {
         document.getElementById('sorting_coins').innerhtml = 'GLDX';
-        $(".input-sm", "#transaction-history_filter").val("GLDX")
+        $("#transaction-history_filter", ".input-sm").val("GLDX")
         console.log($(".input-sm", "#transaction-history_filter").val("GLDX"))
-        document.getElementsByClassName('input-sm').item(2).innerhtml = 'GLDX'; 
         console.log(document.getElementById('sorting_coins').value)
 }
 //     function crfiSort() {
