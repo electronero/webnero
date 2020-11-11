@@ -16,17 +16,20 @@ $(document).ready(function() {
     $('.sorting_asc').attr('id', 'sorting_asc_coins');
     $('.sorting_desc').attr('id', 'sorting_desc_coins');
     $('.input-sm').attr('id', 'sorting_coins');
+    var elements = document.getElementsByClassName('input-sm');
     console.log($('.row_GLDX even'));
     function etnxSort() {
-        document.getElementById('sorting_coins').innerhtml = 'ETNX'
+        document.getElementById('sorting_coins').innerhtml = 'ETNX';
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
+        elements[1].innerhtml = 'ETNX'; 
         console.log(document.getElementById('sorting_coins').value)
 }
     function etnxpSort() {
-        document.getElementById('sorting_coins').innerhtml = 'ETNXP'
+        document.getElementById('sorting_coins').innerhtml = 'ETNXP';
         $("#sorting_desc_coins").click();
         //$(".sorting_desc").click();
+        elements[1].innerhtml = 'ETNXP'; 
         console.log(document.getElementById('sorting_coins').value)
 }
 //     function etnxcSort() {
@@ -34,10 +37,12 @@ $(document).ready(function() {
 // }
     function ltnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'LTNX';
+        elements[1].innerhtml = 'LTNX'; 
         console.log(document.getElementById('sorting_coins').value)
 }
     function gldxSort() {
         document.getElementById('sorting_coins').innerhtml = 'GLDX';
+        elements[1].innerhtml = 'GLDX'; 
         console.log(document.getElementById('sorting_coins').value)
 }
 //     function crfiSort() {
