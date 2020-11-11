@@ -29,25 +29,29 @@ $(document).ready(function() {
         document.getElementById('sorting_coins').innerhtml = 'ETNX';
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
-        $(".input-sm", "#transaction-history_filter").val("ETNX")
+        $(".input-sm", "#transaction-history_filter").val("ETNX");
         var elements_props = $(".input-sm", "#transaction-history_filter");
-        console.log($(".input-sm", "#transaction-history_filter").val("ETNXP"))
+        console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
         console.log(elements_props[0].value)
         console.log(elements_props)
         $(".input-sm", "#transaction-history_filter").click();
-        $("#sorting_coins").click();
+        $(".input-sm").click();
+        let sorting = document.getElementById('sorting_coins');
+        sorting.click();
 }
     function etnxpSort() {
         document.getElementById('sorting_coins').innerhtml = 'ETNXP';
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
-        $(".input-sm", "#transaction-history_filter").val("ETNXP")
+        $(".input-sm", "#transaction-history_filter").val("ETNXP");
         var elements_props = $(".input-sm", "#transaction-history_filter");
         console.log($(".input-sm", "#transaction-history_filter").val("ETNXP"))
         console.log(elements_props[0].value)
         console.log(elements_props)
         $(".input-sm", "#transaction-history_filter").click();
-        $("#sorting_coins").click();
+        $(".input-sm").click();
+        let sorting = document.getElementById('sorting_coins');
+        sorting.click();
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
