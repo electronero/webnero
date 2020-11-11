@@ -20,22 +20,22 @@ $(document).ready(function() {
     console.log($('.row_GLDX even')[0]);
     function etnxSort() {
         //$("#sorting_asc_coins").click();
-        $(".sorting_asc").click();
-  document.getElementsByClassName("input-sm").innerHTML = "ETNX";
+        $(".sorting_desc").click();
+  document.getElementById("sorting_coins").innerHTML = "ETNX";
 }
     function etnxpSort() {
         $("#sorting_desc_coins").click();
         //$(".sorting_desc").click();
-  document.getElementsByClassName("input-sm").innerHTML = "ETNXP";
+  document.getElementById("sorting_coins").innerHTML = "ETNXP";
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
-  document.getElementsByClassName("input-sm").innerHTML = "LTNX";
+  document.getElementById("sorting_coins").innerHTML = "LTNX";
 }
     function gldxSort() {
-  document.getElementsByClassName("input-sm").innerHTML = "GLDX";
+  document.getElementById("sorting_coins").innerHTML = "GLDX";
 }
 //     function crfiSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "CRFI";
