@@ -20,8 +20,10 @@ $(document).ready(function() {
 
     console.log($('.row_GLDX even'));
     console.log(document.getElementsByClassName('input-sm').item(0))
-    console.log(document.getElementsByClassName('input-sm').item(1))
+    console.log(document.getElementsByClassName('input-sm').item(1).val)
     console.log(document.getElementsByClassName('input-sm').item(2))
+    var element = $(".input-sm", "#transaction-history_filter");
+    console.log("element: " + element);
     function etnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'ETNX';
         //$("#sorting_asc_coins").click();
