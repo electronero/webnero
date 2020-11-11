@@ -16,7 +16,7 @@ $(document).ready(function() {
     $('.sorting_asc').attr('id', 'sorting_asc_coins');
     $('.sorting_desc').attr('id', 'sorting_desc_coins');
     $('.input-sm').attr('id', 'sorting_coins');
-    var elements = document.getElementsByClassName('input-sm');
+    var elements = document.getElementById('sorting_coins');
     console.log($('.row_GLDX even'));
     function etnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'ETNX';
