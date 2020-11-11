@@ -49,7 +49,7 @@ $(document).ready(function() {
     function ltnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'LTNX';
         //$("#sorting_asc_coins").click();
-        $(".sorting_desc").click();
+        $(".sorting_asc").click();
         $(".input-sm", "#transaction-history_filter").val("LTNX")
         console.log($(".input-sm", "#transaction-history_filter").val("LTNX"))
         console.log(document.getElementById('sorting_coins').value)
