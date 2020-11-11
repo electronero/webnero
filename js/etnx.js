@@ -282,12 +282,12 @@ var ModelViewController = {
 $(document).on("init.done", function(e){
     console.log(e.type + " - " + e.coin);
     ModelViewController.initLevel++;
-    let initChecker = false;
-    var checker = function(){
-        initChecker = true;
+    let initCheckpoint = false;
+    setTimeout(function(){ 
+        initCheckpoint = true;
         ModelViewController.fillData();
-        console.log("myChecker: " + initChecker);
-    } setTimeout(checker, 2000);
+        console.log("initCheckpoint: " + initCheckpoint);
+    }, 2000);
     console.log("ModelViewController.initLevel: " + ModelViewController.initLevel);
     if(ModelViewController.initLevel == 4){
         $("#spinner-modal").modal('hide');
