@@ -47,11 +47,11 @@ $(document).ready(function() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
-       $(".input-sm").select(function(){
+      $(".input-sm").select(function(){
         $("input").val("LTNX");
       });
-      $("#etnx-coin").click(function(){
-        $("input").trigger("select");
+      $("#ltnx-coin").click(function(){
+        $("input").trigger("click");
       });
     }
     function gldxSort() {
