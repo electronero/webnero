@@ -37,14 +37,14 @@ $(document).ready(function() {
     function gldxSort() {
   document.getElementsByClassName("input-sm").innerHTML = "GLDX";
 }
-    function crfiSort() {
-  document.getElementsByClassName("input-sm").innerHTML = "CRFI";
-}
+//     function crfiSort() {
+//   document.getElementsByClassName("input-sm").innerHTML = "CRFI";
+// }
     document.getElementById("etnx-coin").addEventListener("click", etnxSort);
     document.getElementById("etnxp-coin").addEventListener("click", etnxpSort);
     //document.getElementById("etnxc-coin").addEventListener("click", etnxcSort);
     document.getElementById("ltnx-coin").addEventListener("click", ltnxSort);
     document.getElementById("gldx-coin").addEventListener("click", gldxSort);
-    document.getElementById("crfi-coin").addEventListener("click", crfiSort);
+    //document.getElementById("crfi-coin").addEventListener("click", crfiSort);
     
 });
