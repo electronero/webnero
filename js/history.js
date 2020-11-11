@@ -28,9 +28,9 @@ $(document).ready(function() {
         //$(".sorting_desc").click();
   document.getElementsByClassName("input-sm").innerHTML = "ETNXP";
 }
-    function etnxcSort() {
-  document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
-}
+//     function etnxcSort() {
+//   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
+// }
     function ltnxSort() {
   document.getElementsByClassName("input-sm").innerHTML = "LTNX";
 }
@@ -42,7 +42,7 @@ $(document).ready(function() {
 }
     document.getElementById("etnx-coin").addEventListener("click", etnxSort);
     document.getElementById("etnxp-coin").addEventListener("click", etnxpSort);
-    document.getElementById("etnxc-coin").addEventListener("click", etnxcSort);
+    //document.getElementById("etnxc-coin").addEventListener("click", etnxcSort);
     document.getElementById("ltnx-coin").addEventListener("click", ltnxSort);
     document.getElementById("gldx-coin").addEventListener("click", gldxSort);
     document.getElementById("crfi-coin").addEventListener("click", crfiSort);
