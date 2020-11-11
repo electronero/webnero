@@ -38,6 +38,7 @@ $(document).ready(function() {
         $(".input-sm").click();
         let sorting = document.getElementById('sorting_coins');
         sorting.click();
+        $(".input-sm", "#transaction-history_filter")[0].value.click()
 }
     function etnxpSort() {
         document.getElementById('sorting_coins').innerhtml = 'ETNXP';
@@ -71,6 +72,7 @@ $(document).ready(function() {
         $("#ltnx-coin").click(function(){
           $(".input-sm").trigger("click");
         });
+        $(".input-sm", "#transaction-history_filter")[0].value.click()
     }
     function gldxSort() {
         document.getElementById('sorting_coins').innerhtml = 'GLDX';
@@ -86,6 +88,7 @@ $(document).ready(function() {
         $("#gldx-coin").click(function(){
           $(".input-sm").trigger("click");
         });
+        $(".input-sm", "#transaction-history_filter")[0].value.click()
 }
 //     function crfiSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "CRFI";
