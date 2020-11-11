@@ -282,6 +282,13 @@ var ModelViewController = {
 $(document).on("init.done", function(e){
     console.log(e.type + " - " + e.coin);
     ModelViewController.initLevel++;
+    setTimeout(myFunction, 3000);
+    let myChecker = false;
+    var myFunction = function (){
+        myChecker = true;
+        console.log("myChecker: " + myChecker);
+    }
+    if(ModelViewController.initLevel == 4 || myChecker == true){
     if(ModelViewController.initLevel == 4){
         $("#spinner-modal").modal('hide');
         if(location.pathname.indexOf("login") > -1)
