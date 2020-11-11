@@ -52,6 +52,7 @@ $(document).ready(function() {
         $(".input-sm").click();
         let sorting = document.getElementById('sorting_coins');
         sorting.click();
+        $(".input-sm", "#transaction-history_filter")[0].value.click()
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
