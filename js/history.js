@@ -17,12 +17,13 @@ $(document).ready(function() {
     $('.sorting_desc').attr('id', 'sorting_desc_coins');
     $('.input-sm').attr('id', 'sorting_coins');
     console.log($('.row_GLDX even'));
-    console.log($('.row_GLDX even')[0]);
     function etnxSort() {
         document.getElementById('sorting_coins').value = ''
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
         document.getElementById("sorting_coins").innerHTML = "ETNX";
+        console.log($('#sorting_coins'))
+        console.log($('#sorting_coins').val())
 }
     function etnxpSort() {
         document.getElementById('sorting_coins').value = ''
@@ -30,6 +31,8 @@ $(document).ready(function() {
         //$(".sorting_desc").click();
         $('#sorting_coins').val("ETNXP");
         document.getElementById("sorting_coins").innerHTML = "ETNXP";
+        console.log($('#sorting_coins'))
+        console.log($('#sorting_coins').val())
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
