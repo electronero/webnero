@@ -42,7 +42,7 @@ $(document).ready(function() {
         $(".input-sm", "#transaction-history_filter").val("ETNXP")
         var elements_props = $(".input-sm", "#transaction-history_filter");
         console.log($(".input-sm", "#transaction-history_filter").val("ETNXP"))
-        console.log(elements_props.value)
+        console.log(elements_props[0].value)
         console.log(elements_props)
         $(".input-sm", "#transaction-history_filter").click();
         $("#sorting_coins").click();
