@@ -47,12 +47,19 @@ $(document).ready(function() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
-      $(".input-sm").select(function(){
+        document.getElementById('sorting_coins').innerhtml = 'LTNX';
+        //$("#sorting_asc_coins").click();
+        $(".sorting_desc").click();
+        $(".input-sm", "#transaction-history_filter").val("LTNX")
+        console.log($(".input-sm", "#transaction-history_filter").val("LTNX"))
+        console.log(document.getElementById('sorting_coins').value)
+        $(".input-sm", "#transaction-history_filter").click();
+        $(".input-sm").select(function(){
         $("input").val("LTNX");
-      });
-      $("#ltnx-coin").click(function(){
-        $("input").trigger("click");
-      });
+        });
+        $("#ltnx-coin").click(function(){
+          $(".input-sm").trigger("click");
+        });
     }
     function gldxSort() {
         document.getElementById('sorting_coins').innerhtml = 'GLDX'
