@@ -49,7 +49,7 @@
             </div>
             <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right">
+<!--             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -256,20 +256,23 @@
                     <!-- /.dropdown-user -->
                 </li>
                 <!-- /.dropdown -->
-            </ul>
+            </ul> -->
             <!-- /.navbar-top-links -->
 
             <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
                             <li>
-                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Deposit</a>
                             </li>
                             <li>
-                                <a href="send.html"><i class="fa fa-share-square"></i> Send</a>
+                                <a href="send.html"><i class="fa fa-share-square"></i> Transfer</a>
                             </li>
                             <li>
-                                <a href="receive.html"><i class="fa fa-share-square"></i> Receive</a>
+                                <a href="history.html"><i class="fa fa-share-square"></i> History</a>
+                            </li>
+                            <li>
+                                <a id="logout"><i class="fa fa-share-square"></i> Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -279,115 +282,176 @@
         </nav>
 
         <div id="page-wrapper">
-            <div class="row page-header">
-                <div class="col-lg-6 col-md-12 item">
-                        <div class="panel panel-etnx">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <img height="70px" width="70px" src="../img/etnx.png" />
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">15.984</div>
-                                        <div>Balance</div>
-                                    </div>
+            <div class="row" style="margin-top: 30px">
+                <div class="col-lg-4 col-md-12 item">
+                    <div class="panel panel-etnx">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img height="70px" width="70px" src="../img/etnx.png" />
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="etnx-balance" class="huge"></div>
+                                    <div>Balance</div>
                                 </div>
                             </div>
-                                <div class="panel-footer">
-                                    <span class="pull-left">Unlocked Balance</span>
-                                    <span class="pull-right">26.895</span>
-                                    <div class="clearfix"></div>
-                                </div>                       
                         </div>
+                            <div class="panel-footer">
+                                <span class="pull-left">Unlocked Balance</span>
+                                <span id="etnx-unlocked-balance" class="pull-right"></span>
+                                <div class="clearfix"></div>
+
+                            </div>                       
                     </div>
-                    <div class="col-lg-6 col-md-12 item">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <img height="70px" width="70px" src="../img/etnxp.png" />
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">122.229.800</div>
-                                        <div>Balance</div>
-                                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 item">
+
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img height="70px" width="70px" src="../img/etnxp.png" />
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="etnxp-balance" class="huge"></div>
+                                    <div>Balance</div>
                                 </div>
                             </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">Unlocked Balance</span>
-                                    <span class="pull-right">26.895.000</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-left">Unlocked Balance</span>
+                            <span id="etnxp-unlocked-balance" class="pull-right"></span>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-4 col-md-12 item">
+                    <div class="panel panel-ltnx">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img height="70px" width="70px" src="../img/ltnx.png" />
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="ltnx-balance" class="huge"></div>
+                                    <div>Balance</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-left">Unlocked Balance</span>
+                            <span id="ltnx-unlocked-balance" class="pull-right"></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 item">
+                    <div class="panel panel-etnx">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img height="70px" width="70px" src="../img/gldx.png" />
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div id="gldx-balance" class="huge"></div>
+                                    <div>Balance</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-left">Unlocked Balance</span>
+                            <span id="gldx-unlocked-balance" class="pull-right"></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-etnx">
                         <div class="panel-heading">
-                            <i class="fa fa-clock-o fa-fw"></i> Receive coin
+                            <i class="fa fa-clock-o fa-fw"></i> Your wallets
                         </div>
-                        <div class="panel-body">
+                       <div class="panel-body">
                             <div class="row">
-                                <div class="form-group" style="text-align: center">
-                                    <button class="btn btn-lg btn-login btn-selected coin-selector">
-                                        <img height="70px" width="70px" src="../img/etnx.png" />
-                                    </button>
-                                    <button class="btn btn-lg btn-login coin-selector">
-                                        <img height="70px" width="70px" src="../img/etnxp.png" />
-                                    </button>
-                                    <!--
-                                    <a class="btn btn-lg btn-login"><img height="70px" width="70px" src="../img/etnxp.png" /></a>
-                                    -->
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <h4 class="blockquote">Wallet name #1</h4>
+                                <div class="col-lg-12">
+                                    <h4 class="blockquote">ETNX Wallet</h4>
                                     <blockquote class="selected">
-                                        <p>etnkG3Kmg7i5thbkQenZ5qHh3XnR9MJ3qZ9KtoHDQoEWURWMFGjpXa2GkFaLX6GmsVXn3ER3dPJWkgqt5AdqUCPW7PjUSQTKF1</p>
-                                    </blockquote>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                                <div class="col-lg-6">
-                                    <h4 class="blockquote">Wallet name #2</h4>
-                                    <blockquote>
-                                        <p>etnkG3Kmg7i5thbkQenZ5qHh3XnR9MJ3qZ9KtoHDQoEWURWMFGjpXa2GkFaLX6GmsVXn3ER3dPJWkgqt5AdqUCPW7PjUSQTKF2</p>
-                                    </blockquote>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <h4 class="blockquote">Wallet name #3</h4>
-                                    <blockquote>
-                                        <p>etnkG3Kmg7i5thbkQenZ5qHh3XnR9MJ3qZ9KtoHDQoEWURWMFGjpXa2GkFaLX6GmsVXn3ER3dPJWkgqt5AdqUCPW7PjUSQTKF3</p>
-                                    </blockquote>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h4 class="blockquote">Wallet name #4</h4>
-                                    <blockquote>
-                                        <p>etnkG3Kmg7i5thbkQenZ5qHh3XnR9MJ3qZ9KtoHDQoEWURWMFGjpXa2GkFaLX6GmsVXn3ER3dPJWkgqt5AdqUCPW7PjUSQTKF4</p>
+                                        <button style="background-color: white; color: black" onclick="copyToClipboard('#etnx-wallet')">
+                                    <p id="etnx-wallet" name="etnx-value"></p>
+                                    </button>
                                     </blockquote>
                                 </div>
                             </div>
                             <div class="row" style="text-align: center">
                                 <div class="col-lg-12">
-                                    <div id="qrimage">
+                                    <div id="etnx-qrimage">
+                                        <img id="qrious-etnx">
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.row (nested) -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4 class="blockquote">ETNXP Wallet</h4>
+                                    <blockquote>
+                                        <button style="background-color: white; color: black" onclick="copyToClipboard('#etnxp-wallet')">
+                                    <p id="etnxp-wallet" name="etnxp-value"></p>
+                                    </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="row" style="text-align: center">
+                                <div class="col-lg-12">
+                                    <div id="etnxp-qrimage">
+                                        <img id="qrious-etnxp">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4 class="blockquote">LTNX Wallet</h4>
+                                    <blockquote>
+                                        <button style="background-color: white; color: black" onclick="copyToClipboard('#ltnx-wallet')">
+                                    <p id="ltnx-wallet" name="ltnx-value"></p>
+                                    </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="row" style="text-align: center">
+                                <div class="col-lg-12">
+                                    <div id="ltnx-qrimage">
+                                        <img id="qrious-ltnx">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4 class="blockquote">GLDX Wallet</h4>
+                                    <blockquote>
+                                        <button style="background-color: white; color: black" onclick="copyToClipboard('#gldx-wallet')">
+                                    <p id="gldx-wallet" name="gldx-value"></p>
+                                    </button>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="row" style="text-align: center">
+                                <div class="col-lg-12">
+                                    <div id="gldx-qrimage">
+                                        <img id="qrious-gldx">
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
+
+        </div>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
