@@ -24,10 +24,13 @@ $(document).ready(function() {
     console.log(document.getElementsByClassName('input-sm').item(2))
     var element = $(".input-sm", "#transaction-history_filter");
     console.log(element);
+    
     function etnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'ETNX';
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
+        $(".input-sm", "#transaction-history_filter").val("ETNX")
+        console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
         document.getElementsByClassName('input-sm').item(2).innerhtml = 'ETNX'; 
         console.log(document.getElementById('sorting_coins').value)
 }
@@ -35,22 +38,27 @@ $(document).ready(function() {
         document.getElementById('sorting_coins').innerhtml = 'ETNXP';
         $("#sorting_desc_coins").click();
         //$(".sorting_desc").click();
-        
         document.getElementsByClassName('input-sm').item(0).innerhtml = 'ETNXP'; 
         console.log(document.getElementById('sorting_coins').value)
+        $(".input-sm", "#transaction-history_filter").val("ETNX")
+        console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'LTNX';
-        document.getElementsByClassName('input-sm').item(3).innerhtml = 'LTNX'; 
+        $(".input-sm", "#transaction-history_filter").val("ETNX")
         console.log(document.getElementById('sorting_coins').value)
+        $(".input-sm", "#transaction-history_filter").val("ETNX")
+        console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
 }
     function gldxSort() {
         document.getElementById('sorting_coins').innerhtml = 'GLDX';
         document.getElementsByClassName('input-sm').item(4).innerhtml = 'GLDX'; 
         console.log(document.getElementById('sorting_coins').value)
+        $(".input-sm", "#transaction-history_filter").val("ETNX")
+        console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
 }
 //     function crfiSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "CRFI";
