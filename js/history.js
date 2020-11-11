@@ -16,6 +16,7 @@ $(document).ready(function() {
     $('.sorting_asc').attr('id', 'sorting_asc_coins');
     $('.sorting_desc').attr('id', 'sorting_desc_coins');
     $('.input-sm').attr('id', 'sorting_coins');
+    console.log($('.row_GLDX even'))
     var coin_selected = $(".btn-selected").attr("id");
         switch(coin_selected){
         case 'etnx-coin':
