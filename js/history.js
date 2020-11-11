@@ -31,10 +31,10 @@ $(document).ready(function() {
         $(".sorting_desc").click();
         $(".input-sm", "#transaction-history_filter").val("ETNX")
         console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
-        document.getElementsByClassName('input-sm').item(2).innerhtml = 'ETNX'; 
         console.log(document.getElementById('sorting_coins').value)
 }
     function etnxpSort() {
+        document.getElementById('sorting_coins').innerhtml = 'ETNXP';
         //$("#sorting_desc_coins").click();
         $(".sorting_asc").click();
         $(".input-sm", "#transaction-history_filter").val("ETNXP")
@@ -45,11 +45,13 @@ $(document).ready(function() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
+        document.getElementById('sorting_coins').innerhtml = 'LTNX'
         $(".input-sm", "#transaction-history_filter").val("LTNX")
         console.log($(".input-sm", "#transaction-history_filter").val("LTNX")) 
         console.log(document.getElementById('sorting_coins').value)
 }
     function gldxSort() {
+        document.getElementById('sorting_coins').innerhtml = 'GLDX'
         $(".input-sm", "#transaction-history_filter").val("GLDX")
         console.log($(".input-sm", "#transaction-history_filter").val("GLDX"))
         console.log(document.getElementById('sorting_coins').value)
