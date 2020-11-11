@@ -23,7 +23,7 @@ $(document).ready(function() {
     console.log(document.getElementsByClassName('input-sm').item(1).val)
     console.log(document.getElementsByClassName('input-sm').item(2))
     var element = $(".input-sm", "#transaction-history_filter");
-    console.log("element: " + element);
+    console.log(element);
     function etnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'ETNX';
         //$("#sorting_asc_coins").click();
