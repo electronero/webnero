@@ -47,7 +47,7 @@ $(document).ready(function() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
-       $("input").select(function(){
+       $(".input-sm").select(function(){
         $("input").val("LTNX");
       });
       $("#etnx-coin").click(function(){
