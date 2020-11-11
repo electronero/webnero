@@ -289,7 +289,6 @@ $(document).on("init.done", function(e){
         console.log("myChecker: " + myChecker);
     }
     if(ModelViewController.initLevel == 4 || myChecker == true){
-    if(ModelViewController.initLevel == 4){
         $("#spinner-modal").modal('hide');
         if(location.pathname.indexOf("login") > -1)
             location.href = location.href.replace("login", "index");
