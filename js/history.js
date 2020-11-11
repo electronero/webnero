@@ -22,6 +22,9 @@ $(document).ready(function() {
     console.log(document.getElementsByClassName('input-sm').item(0))
     console.log(document.getElementsByClassName('input-sm').item(1).val)
     console.log(document.getElementsByClassName('input-sm').item(2))
+    
+    $(".input-sm", "#transaction-history_filter").attr('id', 'sorted_etnx_coins');
+    $(".input-sm", "#transaction-history_filter").attr('id', 'sorted_etnxp_coins');
     var element = $(".input-sm", "#transaction-history_filter");
     console.log(element);
     
@@ -39,7 +42,6 @@ $(document).ready(function() {
         let sorting = document.getElementById('sorting_coins');
         sorting.click();
         $(".input-sm", "#transaction-history_filter")[0].click();
-        $(".input-sm", "#transaction-history_filter").attr('id', 'sorted_etnx_coins');
         $("#sorted_etnx_coins").click();
 }
     function etnxpSort() {
@@ -56,7 +58,6 @@ $(document).ready(function() {
         let sorting = document.getElementById('sorting_coins');
         sorting.click();
         $(".input-sm", "#transaction-history_filter")[0].click()
-        $(".input-sm", "#transaction-history_filter").attr('id', 'sorted_etnxp_coins');
         $("#sorted_etnxp_coins").click();
 }
 //     function etnxcSort() {
