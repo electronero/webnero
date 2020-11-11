@@ -32,6 +32,7 @@ $(document).ready(function() {
         $(".input-sm", "#transaction-history_filter").val("ETNX")
         console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
         console.log(document.getElementById('sorting_coins').value)
+        $(".input-sm").click();
 }
     function etnxpSort() {
         document.getElementById('sorting_coins').innerhtml = 'ETNXP';
@@ -40,6 +41,7 @@ $(document).ready(function() {
         $(".input-sm", "#transaction-history_filter").val("ETNXP")
         console.log($(".input-sm", "#transaction-history_filter").val("ETNXP"))
         console.log(document.getElementById('sorting_coins').value)
+        $(".input-sm").click();
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
@@ -49,12 +51,14 @@ $(document).ready(function() {
         $(".input-sm", "#transaction-history_filter").val("LTNX")
         console.log($(".input-sm", "#transaction-history_filter").val("LTNX")) 
         console.log(document.getElementById('sorting_coins').value)
+        $(".input-sm").click();
 }
     function gldxSort() {
         document.getElementById('sorting_coins').innerhtml = 'GLDX'
         $(".input-sm", "#transaction-history_filter").val("GLDX")
         console.log($(".input-sm", "#transaction-history_filter").val("GLDX"))
         console.log(document.getElementById('sorting_coins').value)
+        $(".input-sm").click();
 }
 //     function crfiSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "CRFI";
