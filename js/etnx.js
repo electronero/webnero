@@ -282,15 +282,14 @@ var ModelViewController = {
 $(document).on("init.done", function(e){
     console.log(e.type + " - " + e.coin);
     ModelViewController.initLevel++;
-    let myChecker = false;
-    function myFunction(){
-        myChecker = true;
-        ModelViewController.fillData()
-        console.log("myChecker: " + myChecker);
-        setTimeout(ModelViewController.fillData(), 5000);
-    } setTimeout(myFunction, 2000);
-    console.log(ModelViewController.initLevel);
-    if(ModelViewController.initLevel == 4 || myChecker == true){
+    let initChecker = false;
+    var checker = function(){
+        initChecker = true;
+        ModelViewController.fillData();
+        console.log("myChecker: " + initChecker);
+    } setTimeout(checker, 2000);
+    console.log("ModelViewController.initLevel: " + ModelViewController.initLevel);
+    if(ModelViewController.initLevel == 4){
         $("#spinner-modal").modal('hide');
         if(location.pathname.indexOf("login") > -1)
             location.href = location.href.replace("login", "index");
