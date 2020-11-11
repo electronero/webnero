@@ -40,8 +40,10 @@ $(document).ready(function() {
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
         $(".input-sm", "#transaction-history_filter").val("ETNXP")
+        var elements_props = $(".input-sm", "#transaction-history_filter");
         console.log($(".input-sm", "#transaction-history_filter").val("ETNXP"))
-        console.log($(".input-sm", "#transaction-history_filter").value)
+        console.log(elements_props.value)
+        console.log(elements_props)
         $(".input-sm", "#transaction-history_filter").click();
         $("#sorting_coins").click();
 }
