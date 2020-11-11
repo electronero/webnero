@@ -38,27 +38,27 @@ $(document).ready(function() {
         document.getElementById('sorting_coins').innerhtml = 'ETNXP';
         $("#sorting_desc_coins").click();
         //$(".sorting_desc").click();
-        document.getElementsByClassName('input-sm').item(0).innerhtml = 'ETNXP'; 
+        $(".input-sm", "#transaction-history_filter").val("ETNXP")
+        console.log($(".input-sm", "#transaction-history_filter").val("ETNXP"))
+        document.getElementsByClassName('input-sm').item(2).innerhtml = 'ETNXP'; 
         console.log(document.getElementById('sorting_coins').value)
-        $(".input-sm", "#transaction-history_filter").val("ETNX")
-        console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
         document.getElementById('sorting_coins').innerhtml = 'LTNX';
-        $(".input-sm", "#transaction-history_filter").val("ETNX")
+        $(".input-sm", "#transaction-history_filter").val("LTNX")
+        console.log($(".input-sm", "#transaction-history_filter").val("LTNX"))
+        document.getElementsByClassName('input-sm').item(2).innerhtml = 'LTNX'; 
         console.log(document.getElementById('sorting_coins').value)
-        $(".input-sm", "#transaction-history_filter").val("ETNX")
-        console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
 }
     function gldxSort() {
         document.getElementById('sorting_coins').innerhtml = 'GLDX';
-        document.getElementsByClassName('input-sm').item(4).innerhtml = 'GLDX'; 
+        $(".input-sm", "#transaction-history_filter").val("GLDX")
+        console.log($(".input-sm", "#transaction-history_filter").val("GLDX"))
+        document.getElementsByClassName('input-sm').item(2).innerhtml = 'GLDX'; 
         console.log(document.getElementById('sorting_coins').value)
-        $(".input-sm", "#transaction-history_filter").val("ETNX")
-        console.log($(".input-sm", "#transaction-history_filter").val("ETNX"))
 }
 //     function crfiSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "CRFI";
