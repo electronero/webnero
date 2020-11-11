@@ -1,11 +1,14 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var browserSync = require('browser-sync').create();
+var reload      = browserSync.reload;
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var nunjucksRender = require('gulp-nunjucks-render');
+var data = require('gulp-data');
 
 // Compile LESS files from /less into /css
 gulp.task('less', function(done) {
@@ -51,7 +54,6 @@ gulp.task('js', function(done) {
     gulp.src(['js/login-utils.js']).pipe(gulp.dest('dist/js'));
     gulp.src(['js/register.js']).pipe(gulp.dest('dist/js'));
     gulp.src(['js/pin-code-utils.js']).pipe(gulp.dest('dist/js'));
-    gulp.src(['js/pin-code.js']).pipe(gulp.dest('dist/js'));
     gulp.src(['js/history.js']).pipe(gulp.dest('dist/js'));
     gulp.src(['js/send.js']).pipe(gulp.dest('dist/js'));
     gulp.src(['js/passport.js']).pipe(gulp.dest('dist/js'));
@@ -116,19 +118,35 @@ gulp.task('browserSync', function(done) {
     done();
 })
 
+gulp.task('njk', function() {
+    // Gets .html and .nunjucks files in pages
+    return gulp.src('app/pages/**/*.+(html|njk)')
+    // Adding data to Nunjucks
+    .pipe(data(function() {
+        return require('./app/data.json')
+      }))
+    // Renders template with nunjucks
+    .pipe(nunjucksRender({
+        path: ['app/templates']
+      }))
+    // output files in app folder
+    .pipe(gulp.dest('wallet'))
+  });
+  
 // Run everything
-gulp.task('default', gulp.series('less', 'minify-css', 'js', 'copy', function(done){
+gulp.task('deploy', gulp.series('less', 'minify-css', 'js', 'copy','njk', function(done){
 	done();
 }));
 
-
-
 // Dev task with browserSync
 gulp.task('dev', gulp.series('browserSync', 'less', 'minify-css', 'js', function(done) {
-    gulp.watch('less/*.less', ['less']);
-    gulp.watch('dist/css/*.css', ['minify-css']);
+    gulp.watch('less/*.less', gulp.series('less'));
+    gulp.watch('dist/css/*.css', gulp.series('minify-css'));
     // Reloads the browser whenever HTML or JS files change
-    gulp.watch('pages/*.html', browserSync.reload);
-    gulp.watch('dist/js/*.js', browserSync.reload);
+    gulp.watch('pages/*.html', gulp.series(reload));
+    gulp.watch('dist/js/*.js', gulp.series(reload));
     done();
 }));
+
+
+
