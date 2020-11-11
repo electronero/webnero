@@ -21,18 +21,18 @@ $(document).ready(function() {
         switch(coin_selected){
         case 'etnx-coin':
                 $("#sorting_asc_coins").click();
-            return allInputs.val("ETNX");
+            return $('.input-sm').val("ETNX");
         case 'etnxp-coin':
                 $("#sorting_desc_coins").click();
-            return allInputs.val("ETNXP");
+            return $('.input-sm').val("ETNXP");
         case 'etnxc-coin':
-            return allInputs.val("ETNXC"); 
+            return $('.input-sm').val("ETNXC"); 
         case 'ltnx-coin':
-            return allInputs.val("LTNX"); 
+            return $('.input-sm').val("LTNX"); 
         case 'gldx-coin':
-            return allInputs.val("GLDX"); 
+            return $('.input-sm').val("GLDX"); 
         case 'crfi-coin':
-            return allInputs.val("CRFI"); 
+            return $('.input-sm').val("CRFI"); 
         default:
             break;
         }     
