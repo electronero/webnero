@@ -22,14 +22,14 @@ $(document).ready(function() {
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
         $('#sorting_coins').val("ETNX");
-        console.log($('#sorting_coins'))
+        console.log(document.getElementById('sorting_coins').value)
 }
     function etnxpSort() {
         document.getElementById('sorting_coins').value = ''
         $("#sorting_desc_coins").click();
         //$(".sorting_desc").click();
         $('#sorting_coins').val("ETNXP");
-        console.log($('#sorting_coins'))
+        console.log(document.getElementById('sorting_coins').value)
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
@@ -37,10 +37,12 @@ $(document).ready(function() {
     function ltnxSort() {
         document.getElementById('sorting_coins').value = '';
         $('#sorting_coins').val("LTNX");
+        console.log(document.getElementById('sorting_coins').value)
 }
     function gldxSort() {
         document.getElementById('sorting_coins').value = '';
         $('#sorting_coins').val("GLDX");
+        console.log(document.getElementById('sorting_coins').value)
 }
 //     function crfiSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "CRFI";
