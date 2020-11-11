@@ -19,23 +19,32 @@ $(document).ready(function() {
     console.log($('.row_GLDX even'));
     console.log($('.row_GLDX even')[0]);
     function etnxSort() {
+        document.getElementById('sorting_coins').value = ''
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
-  document.getElementById("sorting_coins").innerHTML = "ETNX";
+        document.getElementById("sorting_coins").innerHTML = "ETNX";
 }
     function etnxpSort() {
+        document.getElementById('sorting_coins').value = ''
         $("#sorting_desc_coins").click();
         //$(".sorting_desc").click();
-  document.getElementById("sorting_coins").innerHTML = "ETNXP";
+        $('#sorting_coins').val("ETNXP");
+        document.getElementById("sorting_coins").innerHTML = "ETNXP";
 }
 //     function etnxcSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
-  document.getElementById("sorting_coins").innerHTML = "LTNX";
+        document.getElementById('sorting_coins').value = ''
+        $(this).closest('form').find("input[type=search], textarea").val("LTNX");
+        $('#sorting_coins').val("LTNX");
+        document.getElementById("sorting_coins").innerHTML = "LTNX";
 }
     function gldxSort() {
-  document.getElementById("sorting_coins").innerHTML = "GLDX";
+        document.getElementById('sorting_coins').value = ''
+        $(this).closest('form').find("input[type=search], textarea").val("GLDX");
+        $('#sorting_coins').val("GLDX");
+        document.getElementById("sorting_coins").innerHTML = "GLDX";
 }
 //     function crfiSort() {
 //   document.getElementsByClassName("input-sm").innerHTML = "CRFI";
