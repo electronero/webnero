@@ -282,18 +282,18 @@ var ModelViewController = {
 $(document).on("init.done", function(e){
     console.log(e.type + " - " + e.coin);
     ModelViewController.initLevel++;
-    setTimeout(myFunction, 3000);
     let myChecker = false;
-    var myFunction = function (){
+    function myFunction(){
         myChecker = true;
+        ModelViewController.fillData()
         console.log("myChecker: " + myChecker);
-    }
-    if(ModelViewController.initLevel == 4 || myChecker == true){
+    } setTimeout(myFunction, 2000);
+    if(ModelViewController.initLevel == 4){
         $("#spinner-modal").modal('hide');
         if(location.pathname.indexOf("login") > -1)
             location.href = location.href.replace("login", "index");
         else
-            ModelViewController.fillData();
+            ModelViewController.fillData()
     }
 });
 
