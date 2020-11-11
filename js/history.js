@@ -18,13 +18,13 @@ $(document).ready(function() {
     $('.input-sm').attr('id', 'sorting_coins');
     console.log($('.row_GLDX even'));
     function etnxSort() {
-        document.getElementById('sorting_coins').value = 'ETNX'
+        document.getElementById('sorting_coins').innerhtml = 'ETNX'
         //$("#sorting_asc_coins").click();
         $(".sorting_desc").click();
         console.log(document.getElementById('sorting_coins').value)
 }
     function etnxpSort() {
-        document.getElementById('sorting_coins').value = 'ETNXP'
+        document.getElementById('sorting_coins').innerhtml = 'ETNXP'
         $("#sorting_desc_coins").click();
         //$(".sorting_desc").click();
         console.log(document.getElementById('sorting_coins').value)
@@ -33,11 +33,11 @@ $(document).ready(function() {
 //   document.getElementsByClassName("input-sm").innerHTML = "ETNXC";
 // }
     function ltnxSort() {
-        document.getElementById('sorting_coins').value = 'LTNX';
+        document.getElementById('sorting_coins').innerhtml = 'LTNX';
         console.log(document.getElementById('sorting_coins').value)
 }
     function gldxSort() {
-        document.getElementById('sorting_coins').value = 'GLDX';
+        document.getElementById('sorting_coins').innerhtml = 'GLDX';
         console.log(document.getElementById('sorting_coins').value)
 }
 //     function crfiSort() {
