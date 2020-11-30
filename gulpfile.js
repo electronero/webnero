@@ -150,7 +150,7 @@ gulp.task('njk-base-uri', function() {
   });
   
 // Run everything
-gulp.task('deploy', gulp.series('less', 'minify-css', 'js', 'copy','njk', function(done){
+gulp.task('deploy', gulp.series('less', 'minify-css', 'js', 'copy','njk','njk-base-uri', function(done){
 	done();
 }));
 
