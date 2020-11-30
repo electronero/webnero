@@ -146,7 +146,7 @@ gulp.task('njk-base-uri', function() {
         path: ['app/templates']
       }))
     // output files in app folder
-    .pipe(gulp.dest('wallet'))
+    .pipe(gulp.dest(''))
   });
   
 // Run everything
