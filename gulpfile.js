@@ -133,6 +133,21 @@ gulp.task('njk', function() {
     // output files in app folder
     .pipe(gulp.dest('wallet'))
   });
+
+gulp.task('njk-base-uri', function() {
+    // Gets .html and .nunjucks files in pages
+    return gulp.src('app/pages/**/*.+(html|njk)')
+    // Adding data to Nunjucks
+    .pipe(data(function() {
+        return require('./app/data.json')
+      }))
+    // Renders template with nunjucks
+    .pipe(nunjucksRender({
+        path: ['app/templates']
+      }))
+    // output files in app folder
+    .pipe(gulp.dest('wallet'))
+  });
   
 // Run everything
 gulp.task('deploy', gulp.series('less', 'minify-css', 'js', 'copy','njk', function(done){
@@ -144,7 +159,7 @@ gulp.task('dev', gulp.series('browserSync', 'less', 'minify-css', 'js', function
     gulp.watch('less/*.less', gulp.series('less'));
     gulp.watch('dist/css/*.css', gulp.series('minify-css'));
     // Reloads the browser whenever HTML or JS files change
-    gulp.watch('pages/*.html', gulp.series(reload));
+    gulp.watch('wallet/*.html', gulp.series(reload));
     gulp.watch('dist/js/*.js', gulp.series(reload));
     done();
 }));
