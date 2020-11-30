@@ -4,7 +4,7 @@ $(document).on("click", "#pin-code", function(){
         $(".alert-danger").css("display", "block");
     }
     else {
-        console.log(pin_code);
+        //console.log(pin_code);
         location.href = location.href.replace("pin-code", "login");
     }
         
