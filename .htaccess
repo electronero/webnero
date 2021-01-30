@@ -1,1 +1,7 @@
-Options -Indexes
+#SetEnvIf Origin "http(s)?://(.+\.)?(crystaleum\.org|electronero\.org)(:\d{1,5})?$" CORS=$0
+#Header always set Access-Control-Allow-Origin "%{CORS}e" env=CORS
+#Header merge  Vary "Origin"
+#Header set Access-Control-Allow-Origin "*"
+DirectoryIndex index.html
+Require all granted
+#Options -Indexes
