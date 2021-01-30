@@ -93,12 +93,12 @@ var ModelViewController = {
     };
     },
     formatCoinTransaction: function(coins, coinSymbol, units){
-    const coinUnits = coinSymbol==="etnx" ? 10000000000000000 : coinSymbol==="etnxp" ? 10000 : coinSymbol==="etnxc" ? 1 : coinSymbol==="ltnx" ? 1 : coinSymbol==="gldx" ? 1 : units;
+    const coinUnits = coinSymbol==="etnx" ? 100000000 : coinSymbol==="etnxp" ? 1000000 : coinSymbol==="etnxc" ? 100 : coinSymbol==="ltnx" ? 100000000 : coinSymbol==="gldx" ? 1000000000000 : units;
     var balancedCoins = coins * coinUnits; 
     return balancedCoins;
     },
     formatCoinUnits: function(coins, coinSymbol, units){
-    const coinUnits = coinSymbol==="etnx" ? 100000000 : coinSymbol==="etnxp" ? 100 : coinSymbol==="etnxc" ? 100 : coinSymbol==="ltnx" ? 100000000 : coinSymbol==="gldx" ? 1000000000000 : units;
+    const coinUnits = coinSymbol==="etnx" ? 100000000 : coinSymbol==="etnxp" ? 1000000 : coinSymbol==="etnxc" ? 100 : coinSymbol==="ltnx" ? 100000000 : coinSymbol==="gldx" ? 1000000000000 : units;
     var coinDecimalPlaces = coinUnits.toString().length - 1;
     var balancedCoins = (parseInt(coins || 0) / coinUnits).toFixed(units || coinDecimalPlaces);
     return balancedCoins;
